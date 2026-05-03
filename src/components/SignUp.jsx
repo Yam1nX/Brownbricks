@@ -1,4 +1,3 @@
-// components/SignUp.jsx
 import { useState } from "react";
 import { Mail, Lock, Eye, EyeOff, UserPlus, User, BookOpen, ArrowLeft } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
