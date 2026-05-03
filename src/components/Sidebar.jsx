@@ -1,4 +1,3 @@
-// components/Sidebar.jsx
 import {
   LayoutDashboard,
   Users,
