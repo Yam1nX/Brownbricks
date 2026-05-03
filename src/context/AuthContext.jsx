@@ -1,9 +1,8 @@
-// context/AuthContext.jsx
 import React, { createContext, useContext, useState, useEffect } from "react";
 
 const AuthContext = createContext();
 
-// Demo credentials
+// Demo
 const DEMO_USERS = [
   { id: 1, email: "tutor@brownbrick.com", password: "password123", name: "Tutor", role: "tutor" },
   { id: 2, email: "admin@brownbrick.com", password: "admin123", name: "Admin", role: "admin" },
@@ -15,7 +14,7 @@ export function AuthProvider({ children }) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Check for saved session
+
     const savedUser = localStorage.getItem("tutorhub_user");
     if (savedUser) {
       try {
@@ -31,7 +30,7 @@ export function AuthProvider({ children }) {
     setError(null);
     console.log("Attempting login with:", email, password);
     
-    // Simulate API call
+
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         const foundUser = DEMO_USERS.find(
@@ -64,14 +63,12 @@ export function AuthProvider({ children }) {
     setError(null);
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        // Check if user already exists
         const existingUser = DEMO_USERS.find(u => u.email.toLowerCase() === userData.email.toLowerCase());
         if (existingUser) {
           const errorMsg = "User already exists with this email";
           setError(errorMsg);
           reject(new Error(errorMsg));
         } else {
-          // Create new user (in real app, send to backend)
           const newUser = {
             id: DEMO_USERS.length + 1,
             email: userData.email,
