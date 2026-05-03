@@ -1,4 +1,3 @@
-// components/SignIn.jsx
 import { useState } from "react";
 import { Mail, Lock, Eye, EyeOff, LogIn, BookOpen } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
@@ -136,7 +135,7 @@ export default function SignIn({ onSwitchToRegister }) {
             WebkitTextFillColor: "transparent",
             marginBottom: 8,
           }}>
-            TutorHub
+            BROWNBRICKS
           </h1>
           <p style={{ color: "#64748b", fontSize: 14 }}>Welcome back! Please sign in to continue</p>
         </div>
